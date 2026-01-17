@@ -1,1 +1,95 @@
-# Artificial-Intelligence
+index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Artificial Intelligence</title>
+</head>
+
+<body style="
+margin: 0;
+min-height: 100vh;
+font-family: 'Segoe UI', Arial, sans-serif;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+color: white;
+
+background:
+radial-gradient(circle at 20% 20%, #22d3ee55, transparent 40%),
+radial-gradient(circle at 80% 10%, #a78bfa55, transparent 45%),
+radial-gradient(circle at 30% 80%, #f472b655, transparent 45%),
+linear-gradient(135deg, #020617, #0f172a, #020617);
+">
+
+<div style="
+background: rgba(255,255,255,0.08);
+backdrop-filter: blur(20px);
+padding: 80px 60px;
+border-radius: 30px;
+box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+max-width: 720px;
+">
+
+<h1 style="
+font-size: 52px;
+margin-bottom: 10px;
+background: linear-gradient(90deg, #38bdf8, #a78bfa, #f472b6);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+">
+<span id="typing"></span><span style="opacity:0.6;">|</span>
+</h1>
+
+<p style="
+font-size: 20px;
+color: #c7d2fe;
+margin-bottom: 30px;
+">
+The future of technology and innovation
+</p>
+
+<p style="
+font-size: 16px;
+color: #e5e7eb;
+line-height: 1.7;
+margin-bottom: 40px;
+">
+Artificial Intelligence (AI) empowers machines to learn, think, and evolve.
+It is reshaping industries, creativity, and the way we interact with the world.
+</p>
+
+<a href="about.html" style="
+background: linear-gradient(135deg, #38bdf8, #a78bfa, #f472b6);
+padding: 16px 36px;
+border-radius: 999px;
+text-decoration: none;
+color: #020617;
+font-weight: bold;
+font-size: 16px;
+display: inline-block;
+box-shadow: 0 10px 30px rgba(167,139,250,0.4);
+">
+Explore AI
+</a>
+
+</div>
+
+<script>
+const text = "Artificial Intelligence";
+let index = 0;
+
+function typeEffect() {
+if (index < text.length) {
+document.getElementById("typing").innerHTML += text.charAt(index);
+index++;
+setTimeout(typeEffect, 90);
+}
+}
+
+typeEffect();
+</script>
+
+</body>
+</html>
