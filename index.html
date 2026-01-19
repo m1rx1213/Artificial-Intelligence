@@ -1,96 +1,126 @@
-index.html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Artificial Intelligence</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI for a Better Tomorrow</title>
+
+  <!-- Mobile Responsiveness -->
+  <style>
+    @media (max-width: 900px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 
 <body style="
-margin: 0;
-min-height: 100vh;
-font-family: 'Segoe UI', Arial, sans-serif;
-display: flex;
-justify-content: center;
-align-items: center;
-text-align: center;
-color: white;
-
-background:
-radial-gradient(circle at 20% 20%, #22d3ee55, transparent 40%),
-radial-gradient(circle at 80% 10%, #a78bfa55, transparent 45%),
-radial-gradient(circle at 30% 80%, #f472b655, transparent 45%),
-linear-gradient(135deg, #020617, #0f172a, #020617);
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: white;
+  background:
+    radial-gradient(circle at 20% 20%, #22d3ee55, transparent 40%),
+    radial-gradient(circle at 80% 10%, #a78bfa55, transparent 45%),
+    radial-gradient(circle at 30% 80%, #f472b655, transparent 45%),
+    linear-gradient(135deg, #020617, #0f172a);
 ">
 
-<div style="
-background: rgba(255,255,255,0.08);
-backdrop-filter: blur(20px);
-padding: 80px 60px;
-border-radius: 30px;
-box-shadow: 0 30px 80px rgba(0,0,0,0.4);
-max-width: 720px;
+<!-- NAVIGATION BAR -->
+<nav style="
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 60px;
+  background: rgba(2,6,23,0.6);
+  backdrop-filter: blur(12px);
+  flex-wrap: wrap;
 ">
 
-<h1 style="
-font-size: 52px;
-margin-bottom: 10px;
-background: linear-gradient(90deg, #38bdf8, #a78bfa, #f472b6);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+  <h2 style="
+    margin: 0;
+    font-size: 22px;
+    background: linear-gradient(90deg, #38bdf8, #a78bfa, #f472b6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  ">
+    AI Tomorrow
+  </h2>
+
+  <div>
+    <a href="index.html" style="margin: 0 16px; color: #e5e7eb; text-decoration: none;">Home</a>
+    <a href="about-ai.html" style="margin: 0 16px; color: #e5e7eb; text-decoration: none;">About AI</a>
+    <a href="sdgs.html" style="margin: 0 16px; color: #e5e7eb; text-decoration: none;">SDGs</a>
+    <a href="future.html" style="margin: 0 16px; color: #e5e7eb; text-decoration: none;">Future</a>
+  </div>
+
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero" style="
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 90px 60px;
+  gap: 40px;
 ">
-<span id="typing"></span><span style="opacity:0.6;">|</span>
-</h1>
 
-<p style="
-font-size: 20px;
-color: #c7d2fe;
-margin-bottom: 30px;
-">
-The future of technology and innovation
-</p>
+  <!-- TEXT CONTENT -->
+  <div style="max-width: 600px;">
 
-<p style="
-font-size: 16px;
-color: #e5e7eb;
-line-height: 1.7;
-margin-bottom: 40px;
-">
-Artificial Intelligence (AI) empowers machines to learn, think, and evolve.
-It is reshaping industries, creativity, and the way we interact with the world.
-</p>
+    <h1 style="
+      font-size: 48px;
+      margin-bottom: 16px;
+      background: linear-gradient(90deg, #38bdf8, #a78bfa, #f472b6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    ">
+      AI for a Better Tomorrow
+    </h1>
 
-<a href="about.html" style="
-background: linear-gradient(135deg, #38bdf8, #a78bfa, #f472b6);
-padding: 16px 36px;
-border-radius: 999px;
-text-decoration: none;
-color: #020617;
-font-weight: bold;
-font-size: 16px;
-display: inline-block;
-box-shadow: 0 10px 30px rgba(167,139,250,0.4);
-">
-Explore AI
-</a>
+    <p style="
+      font-size: 20px;
+      color: #c7d2fe;
+      margin-bottom: 24px;
+    ">
+      Using Artificial Intelligence to build a smarter, sustainable world
+    </p>
 
-</div>
+    <p style="
+      font-size: 16px;
+      line-height: 1.7;
+      color: #e5e7eb;
+      margin-bottom: 32px;
+    ">
+      Artificial Intelligence (AI) helps machines learn and make decisions.
+      Today, AI is transforming healthcare, education, and climate action,
+      supporting the United Nations Sustainable Development Goals (SDGs)
+      to create a better future for everyone.
+    </p>
 
-<script>
-const text = "Artificial Intelligence";
-let index = 0;
+    <a href="about-ai.html" style="
+      background: linear-gradient(135deg, #38bdf8, #a78bfa, #f472b6);
+      padding: 14px 32px;
+      border-radius: 999px;
+      text-decoration: none;
+      color: #020617;
+      font-weight: bold;
+      display: inline-block;
+      box-shadow: 0 10px 30px rgba(167,139,250,0.4);
+    ">
+      Learn More
+    </a>
 
-function typeEffect() {
-if (index < text.length) {
-document.getElementById("typing").innerHTML += text.charAt(index);
-index++;
-setTimeout(typeEffect, 90);
-}
-}
+  </div>
 
-typeEffect();
-</script>
+  <!-- IMAGE -->
+  <div>
+    <img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e"
+         alt="Artificial Intelligence supporting Earth and sustainability"
+         style="
+           width: 460px;
+           max-width: 100%;
+           border-radi
 
-
-</body>
-</html>
